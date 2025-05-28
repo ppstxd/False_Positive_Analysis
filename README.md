@@ -45,56 +45,46 @@ The notebook guides users through a workflow for spatial data analysis and class
 
 - Assesses model performance using standard classification metrics and visualizes the spatial prediction outputs.
 
-### 3. Model Performance & Output
 
-- Assesses model performance using standard classification metrics (e.g., accuracy, F1-score) and visualizes spatial prediction outputs.
+
+
+
+#### Confusion Matrix
+
+<img src="graphs/confusion_matrix.png" alt="Confusion Matrix" width="100%">
 
 ---
 
-#### Performance Metrics & Visualizations
+#### Variable Importance
 
-| Confusion Matrix                           | Variable Importance                        |
-|:------------------------------------------:|:------------------------------------------:|
-| ![Confusion Matrix](graphs/confusion_matrix.png) | ![Variable Importance](graphs/variable_importance.png) |
+<img src="graphs/variable_importance.png" alt="Variable Importance" width="100%">
 
 ---
 
 ### Example Predictions
 
 #### Example 1
-<div align="center">
-  <strong>Planet Raw</strong><br>
-  <img src="graphs/planet_raw_907697.png" width="300"/><br>
-  
-  <strong>Fractional Prediction</strong><br>
-  <img src="graphs/fractional_pred_907697.png" width="300"/><br>
-  
-  <strong>RF Prediction</strong><br>
-  <img src="graphs/rf_pred_907697.png" width="300"/>
-</div>
+
+**Planet Raw Input Data**  
+<img src="graphs/planet_raw_907697.png" alt="Planet Raw" width="100%">
+
+**Fractional Prediction**  
+<img src="graphs/fractional_pred_907697.png" alt="Fractional Prediction" width="100%">
+
+**RF Prediction**  
+<img src="graphs/rf_pred_907697.png" alt="RF Prediction" width="100%">
 
 ---
 
 #### Example 2
-<div align="center">
-  <strong>Planet Raw</strong><br>
-  <img src="graphs/planet_raw_918173.png" width="300"/><br>
-  
-  <strong>Fractional Prediction</strong><br>
-  <img src="graphs/fractional_pred_918173.png" width="300"/><br>
-  
-  <strong>RF Prediction</strong><br>
-  <img src="graphs/rf_pred_918173.png" width="300"/>
-</div>
-```
 
-**Key improvements:**
-1. Added clear separation between examples with `---` horizontal rules
-2. Simplified HTML structure by removing nested `<div>` elements
-3. Standardized image width to 300px for consistency
-4. Added line breaks (`<br>`) between headers and images
-5. Used header levels consistently (`####` for subsections)
-6. Added brief description of metrics in the performance section
+**Planet Raw**  
+<img src="graphs/planet_raw_918173.png" alt="Planet Raw" width="100%">
 
-The relative paths will still work as long as your `graphs/` folder is in the same directory as your `README.md`.
+**Fractional Prediction**  
+<img src="graphs/fractional_pred_918173.png" alt="Fractional Prediction" width="100%">
+
+**RF Prediction**  
+<img src="graphs/rf_pred_918173.png" alt="RF Prediction" width="100%">
+
 
