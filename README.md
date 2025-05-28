@@ -64,6 +64,7 @@ The notebook guides users through a workflow for spatial data analysis and class
 ## Example Predictions
 
 The following tiles show a some examples of UNET model prediction vs. Random Forest model performance, again with the goal to mask out false positive predictions made by UNET.
+Please note that The Random Forest model prediction has no-data values where some or all predictor variables were not available (mostly the "class" variable).
 
 ### **Example 1**
 
@@ -102,3 +103,15 @@ The following tiles show a some examples of UNET model prediction vs. Random For
 **RF Prediction**  
 <img src="graphs/rf_pred_878614.png" alt="RF Prediction" width="100%">
 
+---
+
+### **Example 4**
+
+**Planet Raw**  
+<img src="graphs/planet_raw_907535.png" alt="Planet Raw" width="100%">
+
+**UNET Fractional Prediction**  
+<img src="graphs/fractional_pred_907535.png" alt="Fractional Prediction" width="100%">
+
+**RF Prediction**  
+<img src="graphs/rf_pred_907535.png" alt="RF Prediction" width="100%">
