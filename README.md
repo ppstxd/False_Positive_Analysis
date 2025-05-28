@@ -20,13 +20,9 @@ The notebook guides users through a workflow for spatial data analysis and class
 - Stacks predictor variables and resamples them to 10 meter spatial resolution
 - Extracts values based on sampling points
 - Currently used predictor variables used to train the RF model:
-    - Elevation (https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm)
-    - Aridity Index
-    - Topographic Position Index (TPI)
-    - Slope
-    - Precipitation
-    - Evapotranspiration (ET)
-    - Landcover
+    - Elevation, Slope and Topographic Position Index (TPI) derived from [ALOS](https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm)
+    - Precipitation, Evapotranspiration (ET) and Aridity Index derived from [CHIRPS](https://chc.ucsb.edu/data/chirps) and [MODIS](https://lpdaac.usgs.gov/products/mod16a2v061/)
+    - Landcover [ESA World Cover](https://esa-worldcover.org/en)
     - Class variable (derived from Section 1 in notebook)
 
 
@@ -41,7 +37,7 @@ The notebook guides users through a workflow for spatial data analysis and class
 
 ---
 
-## 3. Model Performance & Output
+## 3. RF Model Performance & Output
 
 - Assesses model performance using standard classification metrics and visualizes the spatial prediction outputs.
 
