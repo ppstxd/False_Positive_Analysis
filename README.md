@@ -4,6 +4,9 @@ This Repo contains the approach for false positive analysis and cleaning of my c
 The notebook guides users through a workflow for spatial data analysis and classification using a Random Forest model in Google Earth Engine (GEE) using GEEmap in Python. The goal is to create a mask for the prediction, to exclude mostly false-positive pixels.
  The workflow is organized into three main sections:
 
+#### Data Source Acknowledgment
+This project uses satellite imagery from the PLANET constellation, provided through the [NICFI](https://university.planet.com/page/tfo) (Norway’s International Climate and Forest Initiative) program. I gratefully acknowledge the PLANET-NICFI initiative for making this high-resolution data available, which is essential for the spatial analysis and crop field prediction in this notebook.
+
 ---
 
 ## 1. Data Preparation
