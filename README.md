@@ -12,7 +12,7 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 ## 1. Data Preparation
 
 - Loads and preprocesses predicted fractional map and land cover raster
-- Creates 300 stratified random sampling points
+- Creates 400 stratified random sampling points total
 - The points were manually labelled with 1 = crop and 0 = non-crop
 
 ---
@@ -50,13 +50,13 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 
 ### Confusion Matrix
 
-<img src="graphs/confusion_matrix.png" alt="Confusion Matrix" width="100%">
+<img src="graphs/confusion_matrix_06.png" alt="Confusion Matrix" width="100%">
 
 ---
 
 ### Variable Importance
 
-<img src="graphs/variable_importance.png" alt="Variable Importance" width="100%">
+<img src="graphs/variable_importance_06.png" alt="Variable Importance" width="100%">
 
 ---
 
