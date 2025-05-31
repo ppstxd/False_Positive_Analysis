@@ -27,13 +27,14 @@ This project uses satellite imagery from the PLANET constellation, provided thro
     - Precipitation, Evapotranspiration (ET) and Aridity Index derived from [CHIRPS](https://chc.ucsb.edu/data/chirps) and [MODIS](https://lpdaac.usgs.gov/products/mod16a2v061/)
     - Landcover [ESA World Cover](https://esa-worldcover.org/en)
     - Class variable (derived from Section 1 in notebook)
+    - Enhanced Vegetation Index (EVI) based on Sentinel-2
 
 
 - Parameters for RF model in GEE:
-  - `numberOfTrees=256`
-  - `variablesPerSplit=4`
+  - `numberOfTrees=300`
+  - `variablesPerSplit=7`
   - `maxNodes=1000`
-  - `minLeafPopulation=10`
+  - `minLeafPopulation=5`
   - `bagFraction=0.632`
   - `seed=42`
 - Trains the model on the prepared dataset and evaluates feature importance.
@@ -50,13 +51,13 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 
 ### Confusion Matrix
 
-<img src="graphs/confusion_matrix_06.png" alt="Confusion Matrix" width="100%">
+<img src="graphs/confusion_matrix_08.png" alt="Confusion Matrix" width="100%">
 
 ---
 
 ### Variable Importance
 
-<img src="graphs/variable_importance_06.png" alt="Variable Importance" width="100%">
+<img src="graphs/variable_importance_08.png" alt="Variable Importance" width="100%">
 
 ---
 
