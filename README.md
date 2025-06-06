@@ -31,11 +31,10 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 
 
 - Parameters for RF model in GEE:
-  - `numberOfTrees=300`
-  - `variablesPerSplit=7`
-  - `maxNodes=1000`
-  - `minLeafPopulation=5`
-  - `bagFraction=0.632`
+  - `numberOfTrees=500`
+  - `variablesPerSplit=3`
+  - `minLeafPopulation=3`
+  - `bagFraction=0.8`
   - `seed=42`
 - Trains the model on the prepared dataset and evaluates feature importance.
 
@@ -51,13 +50,13 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 
 ### Confusion Matrix
 
-<img src="graphs/confusion_matrix_500_04.png" alt="Confusion Matrix" width="100%">
+<img src="graphs/confusion_matrix_500_best_1.png" alt="Confusion Matrix" width="100%">
 
 ---
 
 ### Variable Importance
 
-<img src="graphs/variable_importance_500_04.png" alt="Variable Importance" width="100%">
+<img src="graphs/variable_importance_500_best_1.png" alt="Variable Importance" width="100%">
 
 ---
 
