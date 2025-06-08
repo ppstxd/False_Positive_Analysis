@@ -2,7 +2,7 @@
 
 This Repo contains the approach for false positive analysis and cleaning of my crop field prediction with a UNET model in Angola.
 The notebook guides users through a workflow for spatial data analysis and classification using a Random Forest model in Google Earth Engine (GEE) using GEEmap in Python. The goal is to create a mask for the prediction, to exclude mostly false-positive pixels.
- The workflow is organized into three main sections:
+The workflow is organized into three main sections:
 
 #### Data Source Acknowledgment
 This project uses satellite imagery from the PLANET constellation, provided through the [NICFI](https://university.planet.com/page/tfo) (Norway’s International Climate and Forest Initiative) program. I gratefully acknowledge the PLANET-NICFI initiative for making this high-resolution data available, which is essential for the spatial analysis and crop field prediction in this notebook.
@@ -12,7 +12,7 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 ## 1. Data Preparation
 
 - Loads and preprocesses predicted fractional map and land cover raster
-- Creates 500 stratified random sampling points in total
+- Creates 500 stratified proportional random sampling points in total
 - The points were manually labelled with 1 = crop and 0 = non-crop
 
 ---
@@ -23,18 +23,18 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 - Stacks predictor variables and resamples them to 10 meter spatial resolution
 - Extracts values based on sampling points
 - Currently used predictor variables used to train the RF model:
-    - Elevation, Slope and Topographic Position Index (TPI) derived from [ALOS](https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm)
-    - Precipitation, Evapotranspiration (ET) and Aridity Index derived from [CHIRPS](https://chc.ucsb.edu/data/chirps) and [MODIS](https://lpdaac.usgs.gov/products/mod16a2v061/)
-    - Landcover [ESA World Cover](https://esa-worldcover.org/en)
-    - Class variable (derived from Section 1 in notebook)
-    - Enhanced Vegetation Index (EVI) based on Sentinel-2
+    - **Elevation** derived from [ALOS](https://www.eorc.jaxa.jp/ALOS/en/dataset/aw3d30/aw3d30_e.htm)
+    - **Precipitation**, **Evapotranspiration (ET)** and **Aridity Index'** derived from [CHIRPS](https://chc.ucsb.edu/data/chirps) and [MODIS](https://lpdaac.usgs.gov/products/mod16a2v061/)
+    - **Sentinel-1 Radar** Imagery Median composite (01-2021 - 12-2024)
+    - **Enhanced Vegetation Index (EVI)** based on Sentinel-2
+    - **Class** variable (derived from Section 1 in notebook)
 
 
 - Parameters for RF model in GEE:
   - `numberOfTrees=500`
   - `variablesPerSplit=3`
   - `minLeafPopulation=3`
-  - `bagFraction=0.8`
+  - `bagFraction=0.85`
   - `seed=42`
 - Trains the model on the prepared dataset and evaluates feature importance.
 
@@ -50,13 +50,13 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 
 ### Confusion Matrix
 
-<img src="graphs/confusion_matrix_500_best_1.png" alt="Confusion Matrix" width="100%">
+<img src="graphs/confusion_matrix_500_best_2.png" alt="Confusion Matrix" width="100%">
 
 ---
 
 ### Variable Importance
 
-<img src="graphs/variable_importance_500_best_1.png" alt="Variable Importance" width="100%">
+<img src="graphs/variable_importance_500_best_2.png" alt="Variable Importance" width="100%">
 
 ---
 
