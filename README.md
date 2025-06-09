@@ -29,6 +29,9 @@ This project uses satellite imagery from the PLANET constellation, provided thro
     - **Enhanced Vegetation Index (EVI)** based on Sentinel-2
     - **Class** variable (derived from Section 1 in notebook)
 
+---
+
+## 3. Training of Prediction of RF Model 
 
 - Parameters for RF model in GEE:
   - `numberOfTrees=500`
@@ -36,11 +39,15 @@ This project uses satellite imagery from the PLANET constellation, provided thro
   - `minLeafPopulation=3`
   - `bagFraction=0.85`
   - `seed=42`
-- Trains the model on the prepared dataset and evaluates feature importance.
+
+- Trains the model on the prepared dataset in **Probability Mode**
+- Applies a probability filter for non-crop predictions of .75
+--> Pixels with probability lower than .75 will be classified as crop, eveything else non-crop
+--> Makes mask more conservative in classifying a pixel as non-crop 
 
 ---
 
-## 3. RF Model Performance & Output
+## 4. RF Model Performance & Output
 
 - Assesses model performance using standard classification metrics and visualizes the spatial prediction outputs.
 
@@ -58,6 +65,11 @@ This project uses satellite imagery from the PLANET constellation, provided thro
 
 <img src="graphs/variable_importance_500_best_2.png" alt="Variable Importance" width="100%">
 
+---
+
+## Post Processing
+
+- Removed speckling effect ("salt and pepper" noise)
 ---
 
 ## Example Predictions
@@ -114,3 +126,16 @@ Please note that The Random Forest model prediction has no-data values where som
 
 **RF Prediction**  
 <img src="graphs/rf_pred_907535.png" alt="RF Prediction" width="100%">
+
+---
+
+### **Example 4**
+
+**Planet Raw**  
+<img src="graphs/planet_raw_835331.png" alt="Planet Raw" width="100%">
+
+**UNET Fractional Prediction**  
+<img src="graphs/fractional_pred_835331.png" alt="Fractional Prediction" width="100%">
+
+**RF Prediction**  
+<img src="graphs/rf_pred_835331.png" alt="RF Prediction" width="100%">
