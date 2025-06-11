@@ -139,3 +139,16 @@ Please note that The Random Forest model prediction has no-data values where som
 
 **RF Prediction**  
 <img src="graphs/rf_pred_835331.png" alt="RF Prediction" width="100%">
+
+---
+
+### **Example 6**
+
+**Planet Raw Input Data 2024** 
+<img src="graphs/planet_raw_870549.png" alt="Planet Raw" width="100%">
+
+**UNET Fractional Prediction**  
+<img src="graphs/fractional_pred_870549.png" alt="Fractional Prediction" width="100%">
+
+**RF Prediction**  
+<img src="graphs/rf_pred_870549.png" alt="RF Prediction" width="100%">
